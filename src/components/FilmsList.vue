@@ -16,12 +16,11 @@
     <ul>
         <li :class="{off: !film.public}" v-for="film in filmsList" :key="film.title">
             {{ film.title }}
-            <!-- if public is false -->
-            <!-- on click change value public -->
-            <button v-on:click="() => this.$emit('handleUpdatePublic',film)">public</button>
-            <!-- if public is true -->
-            <!-- on click change value public -->
-            <button>private</button>
+            
+            <button v-on:click="() => this.$emit('handleUpdatePublic',film)">
+                {{ film.public ? 'Private' : 'Public' }}
+            </button>
+            
         </li>
     </ul>
 </template>

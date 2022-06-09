@@ -28,6 +28,7 @@
             },
             handleUpdatePublic(film){
                 console.log('handleUpdatePublic', film);
+                film.public = !film.public;
             }
         },
     }
